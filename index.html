@@ -1,6 +1,164 @@
 <html>
-<head></head>
+    <head>
+
+    <title>Axelrod Python Project</title>
+    <meta name="description" content="The project site for the Axelrod Python Project">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="semantic/dist/semantic.css">
+    <link rel="stylesheet" href="css/monokai.css">
+
+    </head>
+
 <body>
-Axelrod Python Page
-</body
+
+<!-- Github Ribbon -->
+<a href="https://github.com/you"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+
+<!-- Top Menu -->
+<div class="ui six item menu">
+  <div class="header item">
+    Axelrod Python Project
+  </div>
+  <a class="item" href='#axelrod-python-library'>
+    Python library
+  </a>
+  <a class="item" href='#documentation'>
+    Documentation
+  </a>
+  <a class="item" href='#new-strategies-welcome'>
+    Submit a strategy
+  </a>
+  <a class="item" href='#djaxelrod-web-app'>
+    DjAxelrod web app
+  </a>
+  <a class="item" href='#referencing'>
+    Referencing the project
+  </a>
+  <a class="item" href='#contact-us'>
+    Contact us
+  </a>
+</div>
+
+<!-- Introduction -->
+<div class="ui raised very padded text container segment">
+  <h2 class="ui header">Welcome to the Axelrod Python Project</h2>
+  <p>An open reproducible implementation of the Iterated Prisoner's Dilemma Tournament.</p>
+<div class="highlight"><div class="hll"><pre><span class="k">$ </span><span class="nn">pip install axelrod</span>
+</div>
+</div>
+
+  <p>Everything is on <a href='https://github.com/Axelrod-Python'>github</a> and released under an MIT license.<p>
+</div>
+
+<!-- Axelrod Python Library -->
+<div class="ui raised very padded text container segment" id='axelrod-python-library'>
+  <h2 class="ui header">The Axelrod Python Library</h2>
+
+  <p>A Python package with over 70 strategies.</p>
+  <p>Easily contribute more strategies via pull request <b>and/or</b> run your own
+  tournaments:</p>
+
+  <!-- Output of pygmentiz -->
+<div class="highlight"><div class="hll"><pre><span class="kn">import</span> <span class="nn">axelrod</span>
+<span class="n">strategies</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">basic_strategies</span><span class="p">]</span>
+<span class="n">tournament</span> <span class="o">=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">Tournament</span><span class="p">(</span><span class="n">strategies</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">tournament</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">axelrod</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">boxplot</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div></div>
+</div>
+
+<!-- Documentation -->
+<div class="ui raised very padded text container segment" id='documentation'>
+  <h2 class="ui header">Documentation</h2>
+  <p>The library is well documented and should allow you <a
+  href="http://axelrod.readthedocs.org/en/latest/usage.html#using-as-a-library">to create your own
+  tournaments very easily</a>.</p>
+  <p>The documentation is also becoming a good reference point on the Iterated
+  Prisoner's Dilemma with an <a
+  href="http://axelrod.readthedocs.org/en/latest/overview_of_strategies.html">overview of some of the classic tournaments</a>.</p>
+</div>
+
+<!-- New strategies welcome -->
+<div class="ui raised very padded text container segment" id='new-strategies-welcome'>
+  <h2 class="ui header">New strategies welcome</h2>
+
+  <p>
+  The package keep track of the performance of all submitted strategies.
+  </p>
+  <p>
+  Here is the latest summary, if you can beat the current field please do send
+  us <a
+  href='http://axelrod.readthedocs.org/en/latest/contributing.html#contributing-strategies'>contribute</a>
+  and/or <a href='https://gitter.im/Axelrod-Python/Axelrod'>get in touch</a>:
+  </p>
+  <p>
+  <img class="ui fluid image"
+  src='https://github.com/Axelrod-Python/Axelrod/blob/master/assets/strategies_boxplot.png?raw=true'
+  alt='Full tournament results'>
+  </p>
+</div>
+
+<!-- DjAxelrod web app -->
+<div class="ui raised very padded text container segment" id="djaxelrod-web-app">
+  <h2 class="ui header">The DjAxelrod web app</h2>
+  <p>We are building an exciting Django based web app.</p>
+  <p>Soon anyone will be able to create and run tournaments from the library
+  using a simple interface.</p>
+</div>
+
+<!-- How to reference the library -->
+<div class="ui raised very padded text container segment" id="referencing">
+  <h2 class="ui header">How to reference this library</h2>
+  <p>We would be delighted if anyone wanted to use and/or reference this library
+  for their own research.</p>
+  <p>If you do please let us know and reference this page:</p>
+
+<div class="highlight"><pre><div class="hll"><span class="kd">@misc</span><span class="p">{</span><span class="nl">Axelrod-Pythonprojectteam2015</span><span class="p">,</span>
+<span class="na">author</span> = <span class="p">{</span><span class="s2">Axelrod-Python project team</span><span class="p">},</span>
+<span class="na">title</span> = <span class="p">{{</span><span class="s2">Axelrod-Python v0.0.9</span><span class="p">}},</span>
+<span class="na">url</span> = <span class="p">{</span><span class="s2">http://axelrod-python.github.io/</span><span class="p">},</span>
+<span class="na">year</span> = <span class="p">{</span><span class="s2">2015</span><span class="p">}</span>
+<span class="p">}</span>
+</div>
+</pre></div>
+</div>
+
+<!-- Contact information -->
+
+<div class="ui raised very padded text container segment" id="contact-us">
+  <h2 class="ui header">Contact Information</h2>
+
+<div class="ui list">
+  <div class="item">
+    <i class="users icon"></i>
+    <div class="content">
+      <a href='https://gitter.im/Axelrod-Python/Axelrod'>Gitter room (Come and chat with one of us <i class="smile icon"></i>)</a>
+    </div>
+  </div>
+  <div class="item">
+    <i class="github icon"></i>
+    <div class="content">
+      <a href='https://github.com/Axelrod-Python'>https://github.com/Axelrod-Python/</a>
+    </div>
+  </div>
+  <div class="item">
+    <i class="mail icon"></i>
+    <div class="content">
+      <a href="https://groups.google.com/forum/#!topic/axelrod-python" target="_blank">Axelrod-python mail group</a>
+    </div>
+  </div>
+  <div class="item">
+    <i class="linkify icon"></i>
+    <div class="content">
+      <a href="http://axelrod-python.github.io/">axelrod-python.github.io</a>
+    </div>
+  </div>
+</div>
+</div>
+
 </html>
